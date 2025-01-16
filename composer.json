@@ -1,0 +1,17 @@
+{
+    "name": "ahmad/blog",
+   
+    "authors": [
+        {
+            "name": "ahmadothman1981",
+            "email": "ahmadothman@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        }
+    },
+    "require": {}
+}
