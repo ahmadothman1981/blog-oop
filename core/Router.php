@@ -72,7 +72,7 @@ class Router
     {
         //namespace of the class then create a new class by using variable 
         //action is  a method of the class controler 
-       $controllerClass = "App\\Controllers\\$controller";
+       $controllerClass = "App\\Controller\\$controller";
        return (new $controllerClass)->$action(...$params); 
     }
 }
