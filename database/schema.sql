@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS users(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    password TEXT  NOT NULL,
+    role TEXT NOT NULL DEFAULT 'user',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS posts(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    views INT DEFAULT 0,
+    user_id INT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) 
+);
+CREATE TABLE IF NOT EXISTS comments(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    content TEXT NOT NULL,
+    user_id INT NOT NULL,
+    post_id INT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (post_id) REFERENCES posts(id)
+);
