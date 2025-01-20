@@ -8,6 +8,9 @@ $db = App::get('database');
 $schemaFile = __DIR__ . '/../database/schema.sql';
 
 $sql = file_get_contents($schemaFile);
+
+
+
 try {
     $parts = array_filter(array:explode(separator: ';', string: $sql));
    //var_dump($parts);
