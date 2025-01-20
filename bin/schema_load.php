@@ -11,7 +11,7 @@ $sql = file_get_contents($schemaFile);
 
 
 
-try {
+
     $parts = array_filter(array:explode(separator: ';', string: $sql));
    //var_dump($parts);
     foreach ($parts as $sqlPart) 
@@ -19,6 +19,3 @@ try {
         $db->query($sqlPart);
     }
    echo "Schema loaded successfully";
-} catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
-}

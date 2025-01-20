@@ -5,6 +5,9 @@ class ErrorHandler
 {
     public static function handleException(\Throwable $exception)
     {
+
+        static::logError($exception);
+
         if(php_sapi_name() == 'cli')
         {
             static::renderCliError($exception);
@@ -31,6 +34,11 @@ class ErrorHandler
        }
        //exit with status 1 means error occured
        exit(1);
+    }
+    private static function logError(\Throwable $exception):void
+    {
+        $logMessage = static::formatErrorMessage($exception, "[%s] %s: %s in %s on line %d");
+        error_log($logMessage, 3,__DIR__ . '/../logs/errors.log');
     }
     public static function handleError($level, $message, $file, $line)
     {
