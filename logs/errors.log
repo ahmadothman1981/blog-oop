@@ -1,1 +1,2 @@
-[2025-01-20 10:01:34] Exception: Error Processing Request log file in D:\php-course\blog\bin\schema_load.php on line 12
+[2025-01-21 08:23:57] Exception:  web An error occurred in D:\php-course\blog\app\Controller\HomeController.php on line 12
+[2025-01-21 08:23:59] Exception:  web An error occurred in D:\php-course\blog\app\Controller\HomeController.php on line 12

@@ -1,5 +1,7 @@
 <?php
 namespace core;
+use Core\View;
+
 
 class ErrorHandler
 {
@@ -12,7 +14,7 @@ class ErrorHandler
         {
             static::renderCliError($exception);
         }else{
-           // static::renderErrorPage($exception);
+            static::renderErrorPage($exception);
         }
     }
     private static function renderCliError(\Throwable $exception):void
@@ -35,9 +37,30 @@ class ErrorHandler
        //exit with status 1 means error occured
        exit(1);
     }
+    private static function renderErrorPage(\Throwable $exception):void
+    {
+       $isDebug = App::get('config')['app']['debug'] ?? false;
+       if($isDebug)
+       {
+        $errorMessage  = static::formatErrorMessage($exception ,"[%s]Error: %s: %s in %s on line %d\n");
+        $trace = $exception->getTraceAsString();
+       }else{
+        $errorMessage = " An error occurred . Please try again later";
+        $trace = "";
+       }
+
+         http_response_code(500);
+         echo View::render('errors/500', [
+            'errorMessage' => $errorMessage,
+            'trace' => $trace,
+            'isDebug' => $isDebug
+         ],'layouts/main');
+       
+       exit();
+    }
     private static function logError(\Throwable $exception):void
     {
-        $logMessage = static::formatErrorMessage($exception, "[%s] %s: %s in %s on line %d");
+        $logMessage = static::formatErrorMessage($exception, "[%s] %s: %s in %s on line %d\n");
         error_log($logMessage, 3,__DIR__ . '/../logs/errors.log');
     }
     public static function handleError($level, $message, $file, $line)
@@ -58,4 +81,6 @@ class ErrorHandler
             $exception->getLine()
         );
     }
+
+
 }
