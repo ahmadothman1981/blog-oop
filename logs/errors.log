@@ -1,2 +1,6 @@
-[2025-01-21 08:23:57] Exception:  web An error occurred in D:\php-course\blog\app\Controller\HomeController.php on line 12
-[2025-01-21 08:23:59] Exception:  web An error occurred in D:\php-course\blog\app\Controller\HomeController.php on line 12
+[2025-01-21 12:16:34] TypeError: Core\Model::create(): Return value must be of type App\Models\User, null returned in D:\php-course\blog\core\Model.php on line 41
+[2025-01-21 12:20:42] TypeError: Core\Model::create(): Return value must be of type App\Models\User, null returned in D:\php-course\blog\core\Model.php on line 41
+[2025-01-21 12:22:55] PDOException: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email in D:\php-course\blog\core\Database.php on line 32
+[2025-01-21 12:23:14] TypeError: Core\Model::create(): Return value must be of type App\Models\User, null returned in D:\php-course\blog\core\Model.php on line 41
+[2025-01-21 15:12:33] PDOException: SQLSTATE[HY000]: General error: 1 incomplete input in D:\php-course\blog\core\Database.php on line 31
+[2025-01-22 13:02:45] ErrorException: Creation of dynamic property App\Models\Post::$id is deprecated in D:\php-course\blog\core\Database.php on line 38

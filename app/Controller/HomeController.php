@@ -1,17 +1,19 @@
 <?php 
 namespace App\Controller;
 
-
+use App\Models\Post;
 use Core\View;
-use Exception;
+
+
 
 class HomeController
 {
     public function index():string
     {
-        throw new Exception(' web An error occurred');
+       $posts = Post::getRecent(5);
+      
         return View::render('home/index' ,
-        data:['message' => 'Hello World'],
+        data:['posts' => $posts],
     layout:'layouts/main');
     }
 
