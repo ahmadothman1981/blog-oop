@@ -4,3 +4,8 @@
 [2025-01-21 12:23:14] TypeError: Core\Model::create(): Return value must be of type App\Models\User, null returned in D:\php-course\blog\core\Model.php on line 41
 [2025-01-21 15:12:33] PDOException: SQLSTATE[HY000]: General error: 1 incomplete input in D:\php-course\blog\core\Database.php on line 31
 [2025-01-22 13:02:45] ErrorException: Creation of dynamic property App\Models\Post::$id is deprecated in D:\php-course\blog\core\Database.php on line 38
+[2025-01-23 09:28:20] TypeError: PDOStatement::fetch(): Argument #2 ($cursorOrientation) must be of type int, string given in D:\php-course\blog\core\Database.php on line 44
+[2025-01-23 09:30:47] ArgumentCountError: PDOStatement::setFetchMode() expects at least 2 arguments for the fetch mode provided, 1 given in D:\php-course\blog\core\Database.php on line 42
+[2025-01-23 09:31:20] Error: Call to a member function fetch() on true in D:\php-course\blog\core\Database.php on line 44
+[2025-01-23 09:33:28] ErrorException: Creation of dynamic property App\Models\Comment::$id is deprecated in D:\php-course\blog\core\Database.php on line 38
+[2025-01-23 09:34:35] ErrorException: Creation of dynamic property App\Models\Comment::$user_id is deprecated in D:\php-course\blog\core\Database.php on line 38
