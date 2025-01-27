@@ -11,11 +11,22 @@ class PostController
     public function index()
     {
        $search = $_GET['search'] ?? '';
-        $posts = Post::getRecent(5, $search);
+       //create variable for current  page pagination number
+       $page = $_GET['page'] ?? 1;
+       //create variable for how many items in single page
+       $limit = 2;
+
+        $posts = Post::getRecent($limit,$page, $search);
+        $total = Post::count($search);
       
         return View::render('post/index' ,
-        data:['posts' => $posts, 'search' => $search],
-    layout:'layouts/main');
+         data:[
+        'posts' => $posts,
+         'search' => $search,
+         'currentPage' => $page,
+         'totalPages' => ceil($total/$limit)
+        ],
+             layout:'layouts/main');
     }
     public function show($id)
     {

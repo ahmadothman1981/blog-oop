@@ -11,7 +11,10 @@ class View
         $content = static::renderTemplate($template , $data);
         return static::renderLayout($layout , $data , $content);
     }
-
+    public static function partial(string $template , array $data = []): string
+    {
+        return static::renderTemplate("/partials/$template" , $data);
+    }
     protected static function renderTemplate(string $template , array $data): string
     {
         extract($data);
