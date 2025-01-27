@@ -14,7 +14,7 @@ class PostController
        //create variable for current  page pagination number
        $page = $_GET['page'] ?? 1;
        //create variable for how many items in single page
-       $limit = 2;
+       $limit = 1;
 
         $posts = Post::getRecent($limit,$page, $search);
         $total = Post::count($search);
