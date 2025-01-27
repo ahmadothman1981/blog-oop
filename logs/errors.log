@@ -9,3 +9,5 @@
 [2025-01-23 09:31:20] Error: Call to a member function fetch() on true in D:\php-course\blog\core\Database.php on line 44
 [2025-01-23 09:33:28] ErrorException: Creation of dynamic property App\Models\Comment::$id is deprecated in D:\php-course\blog\core\Database.php on line 38
 [2025-01-23 09:34:35] ErrorException: Creation of dynamic property App\Models\Comment::$user_id is deprecated in D:\php-course\blog\core\Database.php on line 38
+[2025-01-27 19:26:15] ErrorException: Creation of dynamic property App\Models\User::$ID is deprecated in D:\php-course\blog\core\Database.php on line 44
+[2025-01-27 19:31:21] ErrorException: session_regenerate_id(): Session ID cannot be regenerated when there is no active session in D:\php-course\blog\app\Services\Auth.php on line 14
