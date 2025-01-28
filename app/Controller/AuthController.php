@@ -30,4 +30,9 @@ class AuthController
             data: ['errors' => 'Invalid credentials']
         );
     }
+    public function destroy()
+    {
+        Auth::logout();
+        Router::redirect('/login');
+    }
 }

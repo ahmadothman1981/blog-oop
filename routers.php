@@ -7,3 +7,4 @@ $router->add('GET','/posts' , 'PostController@index');
 $router->add('GET','/posts/{id}' , 'PostController@show');
 $router->add('GET','/login' , 'authController@create');
 $router->add('POST','/login' , 'authController@store');
+$router->add('POST','/logout' , 'authController@destroy');
