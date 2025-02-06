@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
         <a href="/posts">Posts</a> 
     <?php  if($user): ?>
         <form action="/logout" method="post">
-            <button type="submit">Logout (<?=$user->email?>)</button>
+            <button type="submit">Logout (<?= $user->email?>)</button>
         </form>
         <?php else: ?>
         <a href="/login">Login</a>

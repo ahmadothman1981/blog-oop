@@ -10,10 +10,12 @@ class HomeController
 {
     public function index():string
     {
+       
+      
        $posts = Post::getRecent(5);
       
         return View::render('home/index' ,
-        data:['posts' => $posts],
+        data:['posts' => $posts ],
     layout:'layouts/main');
     }
 

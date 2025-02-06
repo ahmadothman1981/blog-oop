@@ -14,6 +14,10 @@
     <input type="password" name="password" id="password">
     </div>
     <div>
+        <label for="remember">Remember Me</label>
+        <input type="checkbox" name="remember" id="remember">
+    </div>
+    <div>
     <button type="submit">Login</button>
     </div>
 </form>

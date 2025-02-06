@@ -6,9 +6,9 @@ use Core\Model;
 
 class User extends Model
 {
-    protected static $table = 'users';
+    protected static string  $table = 'users';
 
-    public $ID;
+    public $id;
     public $name;
     public $email;
     public $password;
