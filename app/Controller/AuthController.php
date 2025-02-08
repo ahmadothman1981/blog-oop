@@ -4,6 +4,7 @@ namespace App\Controller;
 use Core\View;
 use Core\Router;
 use App\Services\Auth;
+use App\Services\CSRF;
 
 class AuthController
 {
@@ -16,6 +17,10 @@ class AuthController
     }
     public function store()
     {
+        if(!CSRF::verify())
+        {
+            Router::pageExpired();
+        }
         $email = $_POST['email'];
         $password = $_POST['password'];
         $remember = isset($_POST['remember']) ? (bool)$_POST['remember'] : false;
@@ -23,6 +28,8 @@ class AuthController
         $auth = new Auth();
         if($auth->attempt($email , $password , $remember))
         {
+            //CSRF::generateToken(); // Regenerate the token
+           // session_regenerate_id(true); // Regenerate session ID
             Router::redirect('/'); 
         }
 

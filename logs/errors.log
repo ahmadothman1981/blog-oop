@@ -1,0 +1,2 @@
+[2025-02-08 09:25:10] Error: Call to undefined method App\Controller\AuthController::destroy() in D:\php-course\blog\core\Router.php on line 82
+[2025-02-08 11:49:33] ArgumentCountError: Too few arguments to function App\Services\CSRF::verify(), 0 passed in D:\php-course\blog\app\Controller\AuthController.php on line 20 and exactly 1 expected in D:\php-course\blog\app\Services\CSRF.php on line 35
