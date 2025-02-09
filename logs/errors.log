@@ -1,2 +1,68 @@
 [2025-02-08 09:25:10] Error: Call to undefined method App\Controller\AuthController::destroy() in D:\php-course\blog\core\Router.php on line 82
 [2025-02-08 11:49:33] ArgumentCountError: Too few arguments to function App\Services\CSRF::verify(), 0 passed in D:\php-course\blog\app\Controller\AuthController.php on line 20 and exactly 1 expected in D:\php-course\blog\app\Services\CSRF.php on line 35
+[2025-02-09 08:59:37] Error: Call to undefined function 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+   <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/posts">Posts</a> 
+            <form action="/logout" method="post">
+            <button type="submit">Logout (admin@example.com)</button>
+        </form>
+            
+    </nav>
+    <main>
+        <article>
+    <h1>Welcome to Our Blog</h1>
+    <p>Views: 9</p>
+    
+    <p>This is our first blog post. We hope you enjoy it!</p>
+</article>
+
+<section>
+    <h2 id="comments">Comments</h2>
+            <form action="/posts/1/comments" method="post">
+            <input type="hidden" name="_token" value="bff7dec07623fe20bd45ee336197a27c96a62bd72889de244da55a42a49329a9"/>        <textarea name="content" id="content" cols="5" rows="3"></textarea>
+        <button type="submit">Comment</button>
+        </form>
+                    <article>
+        <p>this is third test</p>
+        <small>Posted On : 2025-02-09 04:45:34</small>
+        </article>
+            <article>
+        <p>this is second test</p>
+        <small>Posted On : 2025-02-09 04:45:16</small>
+        </article>
+            <article>
+        <p>this is test for comments create</p>
+        <small>Posted On : 2025-02-09 04:41:38</small>
+        </article>
+            <article>
+        <p>Great first post! Looking forward to more.</p>
+        <small>Posted On : 2025-02-06 09:49:03</small>
+        </article>
+            <article>
+        <p>Welcome to the blogosphere!</p>
+        <small>Posted On : 2025-02-06 09:49:03</small>
+        </article>
+    </section>    </main>
+    <footer>
+        &copy; 2025 My Blog
+    </footer>
+</body>
+</html>
+       () in D:\php-course\blog\core\Router.php on line 71
+[2025-02-09 09:51:53] TypeError: Core\Router::dispatch(): Return value must be of type string, null returned in D:\php-course\blog\core\Router.php on line 62
+[2025-02-09 09:53:13] TypeError: Core\Router::dispatch(): Return value must be of type string, null returned in D:\php-course\blog\core\Router.php on line 62
+[2025-02-09 09:53:14] TypeError: Core\Router::dispatch(): Return value must be of type string, null returned in D:\php-course\blog\core\Router.php on line 62
+[2025-02-09 09:53:15] TypeError: Core\Router::dispatch(): Return value must be of type string, null returned in D:\php-course\blog\core\Router.php on line 62

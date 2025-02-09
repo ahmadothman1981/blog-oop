@@ -15,7 +15,7 @@ $router = new Router();
 require_once __DIR__ .'/../routers.php';
 //pass user information in view template
 
-View::share('user', Auth::user());
+
 
 
 $uri =parse_url($_SERVER['REQUEST_URI'])['path'];
