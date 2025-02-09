@@ -15,7 +15,9 @@
         <a href="/">Home</a>
         <a href="/posts">Posts</a> 
     <?php  if($user): ?>
-        <a href="/admin/dashboard">Admin</a>
+        <?php if(check('dashboard')): ?>
+            <a href="/admin/dashboard">Admin</a>
+        <?php endif; ?>
         <form action="/logout" method="post">
             <?= csrf_token(); ?>
             <button type="submit">Logout (<?= $user->email?>)</button>

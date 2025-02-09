@@ -7,7 +7,7 @@
 
 <section>
     <h2 id="comments">Comments</h2>
-    <?php if($user): ?>
+    <?php if($user && check('comment')): ?>
         <form action="/posts/<?= $post->id ?>/comments" method="post">
         <?= csrf_token(); ?>
         <textarea name="content" id="content" cols="5" rows="3"></textarea>

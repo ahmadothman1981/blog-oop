@@ -43,6 +43,12 @@ class Router
         echo View::render('errors/401');
         exit;
     }
+    public static function forbidden():string
+    {
+        http_response_code(403);
+        echo View::render('errors/403');
+        exit;
+    }
     public function dispatch(string $uri , string $method): string
     {
         $route = $this->findRoute($uri , $method);
