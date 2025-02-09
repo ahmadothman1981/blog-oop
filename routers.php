@@ -17,3 +17,6 @@ $router->add('POST','/posts/{id}/comments' , 'CommentController@store',['auth'])
 $router->add('GET','/login' , 'authController@create');
 $router->add('POST','/login' , 'authController@store');
 $router->add('POST','/logout' , 'authController@destroy');
+
+//======Admin Panel routes
+$router->add('GET','/admin/dashboard' , 'Admin\DashboardController@index', ['auth']);

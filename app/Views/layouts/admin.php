@@ -9,27 +9,21 @@
 </head>
 <body>
     <header>
-        <h1>My Blog</h1>
+        <h1>Dashboard</h1>
     </header>
     <nav>
-        <a href="/">Home</a>
-        <a href="/posts">Posts</a> 
-    <?php  if($user): ?>
-        <a href="/admin/dashboard">Admin</a>
+        <a href="/Admin/dashboard">Dashboard</a>
+        <a href="/admin/posts"> Manage Posts</a>     
         <form action="/logout" method="post">
             <?= csrf_token(); ?>
             <button type="submit">Logout (<?= $user->email?>)</button>
-        </form>
-        <?php else: ?>
-        <a href="/login">Login</a>
-    <?php endif; ?>
-    
+        </form>         
     </nav>
     <main>
         <?=$content?>
     </main>
     <footer>
-        &copy; <?=date('Y')?> My Blog
+        &copy; <?=date('Y')?> My Blog - Admin Panel
     </footer>
 </body>
 </html>
