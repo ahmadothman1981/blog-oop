@@ -16,7 +16,7 @@ class DashboardController
        $recentPosts = Post::getRecent(5);
        $recentComments = Comment::getRecent(5);
 
-        return View::render('Admin/dashboard/index',
+        return View::render('admin/dashboard/index',
         [
             'totalPosts' => $totalPosts,
             'totalComments' => $totalComments,

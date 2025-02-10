@@ -20,3 +20,10 @@ $router->add('POST','/logout' , 'authController@destroy');
 
 //======Admin Panel routes
 $router->add('GET','/admin/dashboard' , 'Admin\DashboardController@index', ['auth']);
+$router->add('GET','/admin/posts' , 'Admin\PostController@index', ['auth']);
+$router->add('GET','/admin/post/create' , 'Admin\PostController@create', ['auth']);
+$router->add('POST','/admin/posts' , 'Admin\PostController@store', ['auth']);
+$router->add('GET','/admin/post/{id}/edit' , 'Admin\PostController@edit', ['auth']);
+$router->add('POST','/admin/posts/{id}' , 'Admin\PostController@update', ['auth']);
+$router->add('POST','/admin/post/{id}/delete' , 'Admin\PostController@destroy', ['auth']);
+

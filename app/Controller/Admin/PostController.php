@@ -11,16 +11,19 @@ class PostController
 {
     public function index()
     {
+        Authorization::verify('dashboard');
         return View::render(
-            template:'admin/posts/index',
+            template:'admin/post/index',
             layout:'layouts/admin',
             data:['posts' => Post::all()]);
     }
 
     public function create()
     {
+        Authorization::verify('create_post');
+       
         return View::render(
-            template:'admin/posts/create',
+            template:'admin/post/create',
             layout:'layouts/admin',
             );
     }
@@ -37,23 +40,26 @@ class PostController
     }
     public function edit($id)
     {
+        $post = Post::find($id);
+        Authorization::verify('edit_post', $post);
         return View::render(
-            template:'admin/posts/edit',
+            template:'admin/post/edit',
             layout:'layouts/admin',
-            data:['posts' => Post::find($id)]);
+            data:['post' => $post]);
     }
     public function update($id)
     {
         $post = Post::find($id);
         Authorization::verify('edit_post', $post);
-        $post = $_POST['title'];
-        $post = $_POST['content'];
+        $post->title = $_POST['title'];
+        $post->content = $_POST['content'];
         $post->save();
         Router::redirect('/admin/posts');
     }
     public function destroy($id)
     {
         $post = Post::find($id);
+        Authorization::verify('delete_post', $post);
         $post->delete();
         Router::redirect('/admin/posts');
     }

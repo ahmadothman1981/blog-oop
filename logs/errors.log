@@ -66,3 +66,13 @@
 [2025-02-09 09:53:13] TypeError: Core\Router::dispatch(): Return value must be of type string, null returned in D:\php-course\blog\core\Router.php on line 62
 [2025-02-09 09:53:14] TypeError: Core\Router::dispatch(): Return value must be of type string, null returned in D:\php-course\blog\core\Router.php on line 62
 [2025-02-09 09:53:15] TypeError: Core\Router::dispatch(): Return value must be of type string, null returned in D:\php-course\blog\core\Router.php on line 62
+[2025-02-10 04:49:13] TypeError: Core\Model::find(): Return value must be of type ?App\Models\Post, false returned in D:\php-course\blog\core\Model.php on line 19
+[2025-02-10 04:50:54] TypeError: Core\Model::find(): Return value must be of type ?App\Models\Post, false returned in D:\php-course\blog\core\Model.php on line 19
+[2025-02-10 05:03:59] TypeError: Core\Model::find(): Return value must be of type ?App\Models\Post, false returned in D:\php-course\blog\core\Model.php on line 19
+[2025-02-10 05:06:04] TypeError: Core\Model::find(): Return value must be of type ?App\Models\Post, false returned in D:\php-course\blog\core\Model.php on line 19
+[2025-02-10 05:07:30] TypeError: Core\Model::find(): Return value must be of type ?App\Models\Post, false returned in D:\php-course\blog\core\Model.php on line 19
+[2025-02-10 05:08:26] RuntimeException: Error:Template not found in : D:\php-course\blog/app/Views/admin/post/create.php in D:\php-course\blog\core\View.php on line 30
+[2025-02-10 05:20:47] ErrorException: Undefined variable $post in D:\php-course\blog\app\Views\Admin\post\edit.php on line 6
+[2025-02-10 05:22:55] ErrorException: Undefined variable $post in D:\php-course\blog\app\Views\Admin\post\edit.php on line 6
+[2025-02-10 05:23:53] ErrorException: Undefined variable $post in D:\php-course\blog\app\Views\Admin\post\edit.php on line 6
+[2025-02-10 05:26:14] ErrorException: Undefined variable $post in D:\php-course\blog\app\Views\Admin\post\edit.php on line 6

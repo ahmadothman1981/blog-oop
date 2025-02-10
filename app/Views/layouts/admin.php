@@ -12,7 +12,7 @@
         <h1>Dashboard</h1>
     </header>
     <nav>
-        <a href="/Admin/dashboard">Dashboard</a>
+        <a href="/admin/dashboard">Dashboard</a>
         <a href="/admin/posts"> Manage Posts</a>     
         <form action="/logout" method="post">
             <?= csrf_token(); ?>
